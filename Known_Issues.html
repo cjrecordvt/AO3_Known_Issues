@@ -1,0 +1,178 @@
+<p>These are the major Known Issues that are currently affecting us on the Archive of Our Own. If you've encountered an issue you don't see here, or you'd like to give us more information or comments, we welcome your feedback via the <a href="http://archiveofourown.org/support" rel="nofollow">Support and Feedback form</a>.</p>
+
+<p>The Archive is still a work-in-progress, and we'll be introducing a whole bunch of new features in the future. Since the Archive is designed, coded and tested by volunteers, the time it takes to introduce new features varies a lot, but we do listen to your requests and feedback and work to respond to it. If you are interested in helping us turn ideas into a reality, please volunteer to join the Archive team via the OTW's <a href="http://transformativeworks.org/how-you-can-help/volunteer" rel="nofollow">Volunteers page</a>.</p><h4>Jump to:</h4>
+<ul>
+<li><a href="#current" rel="nofollow">Current Issues</a></li>
+<li><a href="#posting" rel="nofollow">Posting Works</a></li>
+<li><a href="#importing" rel="nofollow">Importing Works</a></li>
+<li><a href="#collections" rel="nofollow">Collections and Challenges</a></li>
+<li><a href="#downloads" rel="nofollow">Downloads</a></li>
+<li><a href="#notifs" rel="nofollow">Notifications</a></li>
+<li><a href="#preferences" rel="nofollow">Preferences</a></li>
+<li><a href="#navigation" rel="nofollow">Navigating the Site</a></li>
+<li><a href="#browsers" rel="nofollow">Specific Browser Issues</a></li>
+</ul>
+<h3>
+<a name="current" rel="nofollow" id="current"></a>Current Issues</h3>
+<ul>
+<li>
+<strong>Recurrent forced logouts:</strong> If you are receiving a forced logout error every time you try to log in, try to log in from the <a href="https://archiveofourown.org/login" rel="nofollow">Login page</a> rather than from a subpage (such as your Dashboard, a specific works page, etc.)
+</li>
+<li>
+<strong>Works that are unable to be deleted:</strong> If you receive repeated messages of "We couldn't delete that right now, sorry!" when trying to delete a work, it's likely running into some aspect of the work that is making it unable to generate the email that is sent when a work is deleted.  There are some steps you can take that should make it possible to delete: Edit the work text, replacing it with a simple sentence such as 'Placeholder text here'.  If it still can't be deleted after trying this, delete any authors' notes, summary, or very long tags from the work. </li> 
+<li>
+<strong>Sorting bookmarks by "Date Updated" doesn't work correctly:</strong> Due to issues with our search index, sort results will currently appear a little jumbled. If you want to follow a work in progress, please consider subscribing to automatically receive an email when a new chapter is added.</li>
+<li>
+<strong>Sorting works by Hits returns inaccurate listings:</strong> As of <a href="http://archiveofourown.org/admin_posts/376" rel="nofollow">Release 0.9.13</a>, new hits on a work are recorded in the database, but don't make it into the search index right away. The index gets updated only when other work information (new comment, new chapter, etc.) changes. The hit count will be correct in the work blurb, but sorting will be off for some works.</li>
+<li>
+<strong>Subscription page returns 500 error:</strong> Occasionally when a work is deleted, the process to remove subscriptions to that work doesn't run properly, causing Subscription pages to return a 500 error.  If this happens, please <a href="http://archiveofourown.org/support" rel="nofollow">contact Support</a> so they can clear out the deleted subscription and allow your Subscription page to load again.</li>  
+</ul>
+<h3>
+<a name="posting" rel="nofollow" id="posting"></a>Posting Works</h3>
+<h4>Rich Text Editor</h4>
+<ul>
+<li>
+<strong>Formatting lost when pasting from some word processors or editors:</strong> The Rich Text Editor (RTE) is an external component provided by <a href="http://www.tinymce.com/" rel="nofollow">TinyMCE</a>. We most recently upgraded it in <a href="http://archiveofourown.org/admin_posts/376" rel="nofollow">Release 0.9.13</a>, which fixed several lingering bugs affecting our users. Unfortunately, issues remain when pasting from some editing programs. The wide variety of possible combinations available across all operating systems, word processors and Internet browsers makes it impossible to test all permutations, but here are some known problems we are already aware of:
+<ul>
+<li>Microsoft Edge: The current version of the RTE appears to strip all formatting and line breaks when text is pasted in using Microsoft Edge, regardless of word processor. At this time, if you need to use the Rich Text Editor, our only suggestion is to use a different browser, such as Google Chrome or Mozilla Firefox.
+</li>
+<li>Google Drive: The way that Drive encodes styles differs from most traditional word processors, resulting in all character formatting and alignment being stripped out when pasting into the RTE.
+</li>
+<li>Microsoft Word: While left, right and centered alignment are preserved when pasting from modern versions of Word, justified alignment will not work. Please also note that first-line indents are never preserved.  
+</li>
+</ul> 
+If you run into formatting difficulties while posting or need advice on using Work Skins to achieve a desired effect, please <a href="http://archiveofourown.org/support" rel="nofollow">contact Support</a>.</li>
+<li>
+<strong>Rich Text Editor suddenly stopped working:</strong> Some Windows users are running into a new problem with line breaks being lost when pasting into the RTE.  Using "Paste" from the browser Edit menu or the right-click popup menu with some combinations of browser and word processor results in a wall of text with this version of the RTE.
+
+You should be able to retain formatting by using the keyboard shortcuts "ctrl-C" and "ctrl-V" to copy and paste your text. Alternately, Chrome seems to work regardless of the paste method.</li>
+</ul>
+<h4>Multi-Chapter Works</h4>
+<ul>
+<li>
+<strong>Can't add chapter notes and summary for first chapter:</strong> The boxes to enter a summary and beginning and/or end notes for chapter 1 won't appear until chapter 2 is posted. (The summary and notes boxes on the work posting form are for the entire work. In particular this means that any end notes entered here will be <em>work</em> end notes, attached to the end of the last chapter of the work.)</li>
+</ul>
+<h4>Editing Work Data</h4>
+<ul>
+<li>
+<strong>Series order not updated:</strong> When the order of the works in a series is changed, this change is not properly reflected in either the work blurb or the summary at the top of the work. Clicking on the series title will show the series in its proper order, but the works will be labeled with the wrong part numbers. The series information at the bottom of the work text is updated correctly. This problem does not seem to resolve itself with time, but it's been reported to our coders to work on a fix.</li>
+<li>
+<strong>Adding an anonymous work to a new series will break anonymity:</strong> If your work is part of a collection or challenge that is currently set to anonymous and you add the work to a series, the series will show up on your 'Works in Collections' page, leading to the blurb containing all information for your work, but with "Anonymous" set as the author. It will still display as a Mystery Work at the top of your home page and on your work listing.</li> 
+</ul>
+<h4>Multimedia Embeds</h4>
+<ul>
+<li>
+<strong>Pasting with quote marks:</strong> Several versions of the major browsers are inconsistently converting regular quote marks to angled smart quotes when pasting in HTML code - for example, embed code - with attributes enclosed in quotes. These smart quotes in the HTML code will be stripped out by the parser, rendering the code unusable and causing the entire embed to be stripped out. You'll need to manually go through the pasted code and replace the “smart” angled quotes with "straight" double quotes. Unfortunately, we can't give reliable browser recommendations here, as this behaviour seems to vary for browser versions on different platforms.</li>
+</ul>
+<h4>Tags</h4>
+<ul>
+<li>
+<strong>Tags are not case-sensitive:</strong> You may find that when you enter a tag, it defaults to the capitalisation which already exists in the database, which may be different from the one you entered. If you think a canonical tag is wrongly capitalised you can <a href="http://archiveofourown.org/support" rel="nofollow">submit a Support request</a> and our tag wranglers will look into changing it (subject to <a href="http://archiveofourown.org/wrangling_guidelines/2" rel="nofollow">wrangling guidelines</a>).</li>
+<li>
+<strong>Tags with diacritics:</strong> Tags with diacritics (accented letters such as à or š) are currently not recognized as separate from spelling variants with non-accented letters. If necessary, wranglers can disambiguate problematic tags (where accented and non-accented versions actually mean different things), so if anything seems wrong to you, please <a href="http://archiveofourown.org/support" rel="nofollow">contact Support</a> to let us know.</li>
+</ul><h4>Emoji and Emoticons</h4>
+<ul>
+<li>
+<strong>Text-based emoticons in the HTML editor:</strong> Emoticons starting with &lt; will confuse the HTML parser - it sees that as HTML code and assumes the rest of the work is a badly-formed HTML tag, removing it. You can work around this by manually entering the HTML for the left bracket (&amp;lt;) or by entering the emoticon using the Rich Text Editor.</li>
+<li>
+<strong>Emoji and Extended unicode on the Archive:</strong> Due to interactions between the database software and the code framework we use, the Archive does not support any Unicode characters past ✏ (U#9999 U+270F). This includes some language scripts and many common emoji. Using one of these characters in a work or comment will cause a 500 error and the work or comment will be unable to be posted.  Our coders are aware of the issue and are working to upgrade the database to support these characters.</li>
+</ul><h3>
+<a name="importing" rel="nofollow" id="importing"></a>Importing Works</h3>
+<ul>
+<li>
+<strong>Imports from FF.net:</strong> Imports of works hosted on fanfiction.net are currently not supported, as FF.net has blocked the Archive from accessing their site - see <a href="http://archiveofourown.org/admin_posts/183" rel="nofollow">this post on FF.net problems</a> for more information.</li>
+<li>
+<strong>Imports from other sites:</strong> due to issues with the page layout, our parser is unable to interpret the content on pages from several other sites, including tumblr.com, Quotev.com, Adultfanfiction.net, and Wattpad.com, as well as files publicly shared at Google Drive/Google Docs, Word Online, and DropBox. This causes the import to immediately fail and generate an "error 500". Our best suggestion is to copy the content directly from the page and paste it into the Rich Text editor.
+</li>
+<li>
+<strong>Imports from sites with Age Verification confirmations:</strong> the Archive import code is not able to bypass most sites' age verification pages (it is only six, after all). It will return the age verification as content or the import will fail. To import from a site such as Livejournal or Dreamwidth that has an age verification page or pop-up, you will need to temporarily mark your content on the original site in a way that disables the age verification.
+</li>
+<li>
+<strong>Imported works post without preview:</strong> Importing multiple works in one go results in them being posted immediately instead of being previewed first. This is a bug and will be fixed in the future. You can work around this for now by importing works one by one.</li>
+<li>
+<strong>Multichapter importing:</strong> Currently, if you import a multichapter work (either from a single URL, or using multiple URLs and choosing to import as chapters of a single work) only the first chapter is viewable/editable before posting.  Additionally, choosing to Edit before posting will cause your work to appear with two copies of chapter 1 and no chapter 2.  You can avoid this problem by choosing either "Post" to post directly or "Save Work Draft" to save the work to your Drafts (so you can edit it before posting).</li>
+</ul>
+<h3>
+<a name="collections" rel="nofollow" id="collections"></a>Collections and Challenges</h3>
+<ul>
+<li>
+<strong>I still have the option to submit a work to a finished challenge:</strong> At the moment, the dates functionality on the challenge settings page is for information only. If you're the owner of a challenge, you have to manually close the challenge at the finishing date.</li>
+<li>
+<strong>Signup Summary ignores Optional Tags:</strong> Fandoms entered in the "Optional Tags" box of Gift Exchanges (for example, "bucket list" offers) are not factored in when the Signup Summary page is created.  Fandoms that have only been requested in this way will not appear in the Signup Summary at all.</li>
+<li>
+<strong>Challenge appears not to accept username</strong> If you're trying to assign a user to pinch hit, or for matching in general, sometimes challenges appear to not accept the name. This happens when two or more Archive users use the same pseud. You should specify the user name too by entering "ao3_support (ao3_support)" (substituting their username) in the field to work around this issue.</li>
+</ul>
+<h3>
+<a name="downloads" rel="nofollow" id="downloads"></a>Downloads</h3>
+<ul>
+<li>
+<strong>Problems with .mobi files:</strong> We are experiencing problems with the conversion tool we use to generate .mobi files from HTML, such as random characters appearing in place of spaces. In particular, the Â character will be inserted wherever the author left a double-space in their text, e.g. after a period or a closing HTML tag. We apologize for messy files and will look into better conversion options. In the meantime, you can try one of the other download formats that might be compatible with your device.</li>
+<li>
+<strong>Large MOBI files fail:</strong> Due to the age of the third-party code we use to generate download files, it's unable to make MOBI files for works over 300,000 words or so. We recommend downloading EPUB or HTML versions of very long works, and using another program, such as Calibre, to convert them.</li>
+<li>
+<strong>EPUBS missing chapter end notes:</strong> EPUB downloads of works with chapter end notes will be missing those notes. Until we can find a better conversion solution, the best work-around is to download the work in a different format and then use a program such as <a href="http://calibre-ebook.com/" rel="nofollow">Calibre</a> to convert it to EPUB.</li>
+<li>
+<strong>Incorrectly transliterated file names:</strong> As of <a href="https://archiveofourown.org/admin_posts/2639" rel="nofollow">Release 0.9.53</a>, our code for generating MOBI/EPUB/PDF/HTML file names automatically transliterates languages that use non-Latin alphabets, e.g. Japanese or Russian. We can't control how work titles are transliterated, and since it's an automated process, some results will not be correct. (Previously, however, titles composed entirely of non-Latin characters were blanked, leading to identical file names like "-.epub", so this is an improvement.) The transliteration will only affect the file name and not the contents of the file itself. In particular, titles will still appear correctly in your e-reader or app!</li>
+</ul>
+<h3>
+<a name="notifs" rel="nofollow" id="notifs"></a>Notifications</h3>
+<ul>
+<li>
+<strong>Notifications about related works don’t go out if the work is posted without preview:</strong> If you are creating a new work with "This work is a remix, a translation, or was inspired by another work" ticked, choosing to preview at least once before posting will ensure a notification is sent to the author of the inspiring work.</li>
+<li>
+<strong>Edits to an already posted work don't trigger certain notifications to be sent:</strong> Notifications about related works/series subscription emails will currently not be sent if a remix or translation link/series name is added to a work after it's already been posted. You can monitor the numbers for Related Works in your Dashboard sidebar, and check series subscriptions manually if you are unsure. We are working on a fix!</li>
+<li>
+<strong>Not getting any emails:</strong> We've been getting reports about missing subscription notifications even when we couldn't see any problems with the mailing queue on our end. In all likelihood, these emails are getting caught in spam filters. Please check your junk mail folder and add do-not-reply@archiveofourown.org to your address book to increase chances of successful delivery. You can also follow these <a href="http://shinykari.tumblr.com/post/31376335509" rel="nofollow">unofficial instructions for whitelisting all emails from the Archive</a>.  If you use Gmail, check that your notifications may be going into your Social folder in the web interface.</li>
+</ul>
+<h3>
+<a name="preferences" rel="nofollow" id="preferences"></a>Preferences</h3>
+<ul>
+<li>
+<strong>Hit counter doesn't respect settings:</strong> We've had user reports of hit counters showing up even though the user had selected not to see them. We're looking into possible reasons, such as caching weirdness.</li>
+</ul>
+<h3>
+<a name="navigation" rel="nofollow" id="navigation"></a>Navigating the Site</h3>
+<h4>Redirects</h4>
+<ul>
+<li>
+<strong>Commenting:</strong> Occasionally after commenting or leaving kudos on a chapter users will be booted back to the first chapter or full work, depending on the preferences set.</li>
+</ul>
+<h4>Marked works</h4>
+<ul>
+<li>
+<strong>Slow "Mark as read" update:</strong> Clicking the "Mark for later" button on top of a work will result in a success message, although you might have to wait a while until the work shows up in your history and the button changes into the "Mark as read" button at the bottom. Please keep in mind that due to caching, you might also need to wait up to ten minutes to see it vanish from your History &gt; Marked for Later list once you've marked it as read.</li>
+</ul>
+<h4>Buttons</h4>
+<ul>
+<li>
+<strong>Share box always open:</strong> Some third-party browser userscripts cause the 'Share' button that usually pops up a pre-formatted block of work information to be replaced by the text it's supposed to hold. This is due to a conflict between the userscript and the jQuery plugin we use for our help boxes. The quick and dirty way of solving this problem is to disable AO3-related userscripts. For more information, see our <a href="http://archiveofourown.org/admin_posts/300" rel="nofollow">Known Issues from Release 0.9.6</a>.</li>
+</ul>
+<h3>
+<a name="browsers" rel="nofollow" id="browsers"></a>Specific Browser Issues</h3>
+<h4>Microsoft Edge</h4>
+<ul>
+<li>As noted above, the Rich Text Editor does not paste in any formatting, including line breaks.</li>
+<li>Testing is still ongoing for this browser. If you find any issues not listed here or above, <a href="http://ao3.org/support" rel="nofollow">please submit a Support ticket.</a>
+</li>
+</ul>
+<h4>Internet Explorer</h4>
+<ul>
+<li>
+<strong>Tags in the work blurb:</strong> The commas separating tags are not showing up in older versions of IE.</li>
+<li>
+<strong>Replying to comments:</strong> Some people are reporting problems replying to comments in IE. If you run into this issue, consider <a href="http://archiveofourown.org/support" rel="nofollow">contacting us</a> with the steps you were taking, so we can try and reproduce this bug.</li>
+<li>
+<strong>Internet Explorer 6, 7, and 8:</strong> We realize that some of our users are forced to use older versions of IE and are doing our best to make the site as functional as possible for them. However, some portions of the site will look broken or behave erratically. If you can, please upgrade to a newer version of Internet Explorer, or use a different browser.</li>
+</ul>
+<h4>Chrome</h4>
+<ul>
+<li>
+<strong>Tag feeds displaying as code:</strong> Clicking the "Subscribe to the feed" link on fandom/relationship/character tag pages will open a page of raw code instead of letting you choose a feed reader to subscribe with. This is a problem with Chrome and not something we can fix on our end. Please consider installing an extension such as <a href="https://chrome.google.com/webstore/detail/nlbjncdgjeocebhnmkbbbdekmmmcbfjd" rel="nofollow">RSS Subscription</a> or <a href="https://chrome.google.com/webstore/detail/hipbfijinpcgfogaopmgehiegacbhmob" rel="nofollow">Feedly</a>, or using a different browser to subscribe to tags.</li>
+<li>
+<strong>Unable to add notes/series/chapter information to a work:</strong> If some elements of the posting form won't open for you when ticking the respective box, it's possible that a browser extension is interfering with the site's Javascript. In particular, some users have reported that disabling the <a href="https://chrome.google.com/webstore/detail/hndllphbhpadfpoikpaofkkkpkpnmjik" rel="nofollow">Troll Emoticons</a> add-on took care of the problem for them.</li>
+</ul>
+<h4>iPhone/iPad/iPod touch</h4>
+<ul>
+<li>
+<strong>Problems with the help boxes:</strong> The iBox pop-ups we use for our help content don't display well in mobile Safari, and other mobile browsers. We've been looking into fixes, but might have to change the way to display help content entirely to accommodate mobile devices. Please bear with us in the meantime. As a workaround, you can tap and hold on the question mark symbols to open these links in a background tab.</li>
+</ul>
